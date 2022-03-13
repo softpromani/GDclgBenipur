@@ -13,8 +13,8 @@
     </div>
   </div>
 </div>
-<!-- /.container-fluid -->
 
+<!-- /.container-fluid -->
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">Details of Teachers</h3>

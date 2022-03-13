@@ -23,7 +23,7 @@
 <!-- /.container-fluid -->
 
 <div class="card">
-    <form method="post" action="{{route('admin.saveteacher')}}" enctype="multipart/form-data">
+    <form method="post" action="{{route('admin.saveslider')}}" enctype="multipart/form-data">
         @csrf
         <div class="form-group m-3">
             <div class="row">
