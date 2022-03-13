@@ -29,13 +29,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('admin.notification')}}" class="nav-link">
+            <a href="{{route('admin.notice')}}" class="nav-link">
               <i class="nav-icon fas fa-bell"></i>
-              <p> Notification </p>
+              <p> Notice </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.department')}}" class="nav-link">
               <i class="nav-icon fas fa-address-book"></i>
               <p> Department </p>
             </a>
@@ -47,13 +47,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{{route('admin.addteacher')}}" class="nav-link">
                     <i class="far fa-list nav-icon"></i>
                     <p>Add Teacher</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admin.viewteacher')}}" class="nav-link">
                       <i class="far fa-list nav-icon"></i>
                       <p>View Teacher</p>
                     </a>
@@ -67,13 +67,13 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{{route('admin.addnonteacher')}}" class="nav-link">
                     <i class="far fa-list nav-icon"></i>
                     <p>Add Non-Teaching</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admin.viewnonteacher')}}" class="nav-link">
                       <i class="far fa-list nav-icon"></i>
                       <p>View Non-Teaching</p>
                     </a>
@@ -81,7 +81,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.slider')}}" class="nav-link">
               <i class="nav-icon fas fa-address-card"></i>
               <p> Slider </p>
             </a>

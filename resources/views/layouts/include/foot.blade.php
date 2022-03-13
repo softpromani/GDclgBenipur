@@ -1,6 +1,9 @@
 <script src="{{asset('adminlayout/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('adminlayout/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- Toastr -->
+<script src="{{asset('adminlayout/plugins/toastr/toastr.min.js')}}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('adminlayout/dist/js/adminlte.min.js')}}"></script>
 
