@@ -93,37 +93,19 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{{route('admin.gallery')}}" class="nav-link">
                     <i class="far fa-list nav-icon"></i>
-                    <p>Add Image</p>
+                    <p>Images</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-list nav-icon"></i>
-                      <p>View Image</p>
-                    </a>
-                  </li>
+              
             </ul>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('admin.press')}}" class="nav-link">
                   <i class="nav-icon fas fa-newspaper"></i>
-                  <p> Manage Press <i class="right fas fa-angle-left"></i></p>
+                  <p> Manage Press </p>
                 </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">
-                        <i class="far fa-list nav-icon"></i>
-                        <p>Add Images</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          <i class="far fa-list nav-icon"></i>
-                          <p>View Images</p>
-                        </a>
-                      </li>
-                </ul>
+                
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -132,19 +114,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <a href="{{route('admin.academiccalendar')}}" class="nav-link">
                         <i class="far fa-list nav-icon"></i>
                         <p>Academic Calendar</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.timetable')}}" class="nav-link">
                           <i class="far fa-list nav-icon"></i>
                           <p>Time Table</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.feestructure')}}" class="nav-link">
                           <i class="far fa-list nav-icon"></i>
                           <p>Fee Structure</p>
                         </a>
@@ -158,13 +140,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <a href="{{route('admin.committee')}}" class="nav-link">
                         <i class="far fa-list nav-icon"></i>
                         <p>Committees</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.comember')}}" class="nav-link">
                           <i class="far fa-list nav-icon"></i>
                           <p>Members</p>
                         </a>
@@ -178,13 +160,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <a href="{{route('admin.aqar')}}" class="nav-link">
                         <i class="far fa-list nav-icon"></i>
                         <p>AQAR</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.ssr')}}" class="nav-link">
                           <i class="far fa-list nav-icon"></i>
                           <p>SSR</p>
                         </a>
