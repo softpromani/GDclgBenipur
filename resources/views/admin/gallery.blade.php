@@ -10,12 +10,12 @@
 <div class="container-fluid">
   <div class="row mb-2">
     <div class="col-sm-6">
-      <h1>Add Slider</h1>
+      <h1>Add Gallery</h1>
     </div>
     <div class="col-sm-6">
       <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Add Slider</a></li>
+        <li class="breadcrumb-item"><a href="#">Add Gallery</a></li>
       </ol>
     </div>
   </div>
@@ -23,7 +23,7 @@
 <!-- /.container-fluid -->
 
 <div class="card">
-    <form method="post" action="{{route('admin.saveslider')}}" enctype="multipart/form-data">
+    <form method="post" action="{{route('admin.savegallery')}}" enctype="multipart/form-data">
         @csrf
         <div class="form-group m-3">
             <div class="row">
@@ -55,7 +55,7 @@
 <!-- /.container-fluid -->
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Details of Sliders</h3>
+        <h3 class="card-title">Details of Gallery</h3>
       </div>
       <!-- /.card-header -->
       <div class="card-body">
@@ -74,14 +74,14 @@
             @php
             $sn=1;
             @endphp
-          @foreach ($sliders as $slider )
+          @foreach ($files as $file )
             <tr>
                 <td>{{$sn}}</td>
-                <td><img src="{{asset('/upload/slider/').'/'.$slider->filename}}" style="height:50px;width:50px;"/></td>
-                <td>{{$slider->text1}}</td>
-                <td>{{$slider->text2}}</td>
-                <td>{{$slider->updated_at}}</td>
-                <td><button type='button' value='{{$slider->id}}' class='btn btn-danger' onclick='del(this)'><i class="fas fa-trash text-light"></i></button></td>
+                <td><img src="{{asset('/upload/gallery/').'/'.$file->filename}}" style="height:50px;width:50px;"/></td>
+                <td>{{$file->text1}}</td>
+                <td>{{$file->text2}}</td>
+                <td>{{$file->updated_at}}</td>
+                <td><button type='button' value='{{$file->id}}' class='btn btn-danger' onclick='del(this)'><i class="fas fa-trash text-light"></i></button></td>
             </tr>
             @php $sn++; @endphp
           @endforeach
@@ -89,8 +89,8 @@
         </table>
 </div>
 <script>
-    var newurl="{{route('admin.delslider')}}";
-    var swname=" Slider";
+    var newurl="{{route('admin.delgallery')}}";
+    var swname=" Gallery";
 </script>
 <script src="{{asset('adminlayout/js/alertswal.js')}}"></script>
 
