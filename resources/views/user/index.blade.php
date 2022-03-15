@@ -500,12 +500,13 @@
             <div class="container">
                 <div class="portfolio-item row">
                     <div class="item selfie col-sm-1 col-md-3 col-lg-4"  >
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg"
+                        <a href="{{asset('userlayout/images/gallery/1.jpg')}}"
                             class="fancylight popup-btn" data-fancybox-group="light">
                             <div class="box1">
-                                <img src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" >
+                                <img src="{{asset('userlayout/images/gallery/1.jpg')}}" >
                                 <div class="box-content1">
-                                    <span class="post">S.D.G.D. College</span>
+                                    <h3 class="title">S.D.G.D. College</h3>
+                                    {{-- <span class="post">S.D.G.D. College</span> --}}
                                 </div>
                             </div>
                             {{-- <img class="img-fluid pic"
@@ -515,40 +516,30 @@
 
                     </div>
                     <div class="item selfie col-sm-1 col-md-3 col-lg-4"  >
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg"
+                        <a href="{{asset('userlayout/images/gallery/2.jpg')}}"
                             class="fancylight popup-btn" data-fancybox-group="light">
                             <div class="box1">
-                                <img src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" >
+                                <img src="{{asset('userlayout/images/gallery/2.jpg')}}" >
                                 <div class="box-content1">
-                                    <span class="post">S.D.G.D. College</span>
+                                    <h3 class="title">S.D.G.D. College</h3>
+                                    {{-- <span class="post">S.D.G.D. College</span> --}}
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="item selfie col-sm-1 col-md-3 col-lg-4"  >
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg"
+                        <a href="{{asset('userlayout/images/gallery/4.jpg')}}"
                             class="fancylight popup-btn" data-fancybox-group="light">
                             <div class="box1">
-                                <img src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" >
+                                <img src="{{asset('userlayout/images/gallery/4.jpg')}}" >
                                 <div class="box-content1">
-                                    <h3 class="title">Williamson</h3>
-                                    <span class="post">Web designer</span>
+                                    <h3 class="title">S.D.G.D. College</h3>
+                                    {{-- <span class="post">Web designer</span> --}}
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="item selfie col-sm-1 col-md-3 col-lg-4"  >
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg"
-                            class="fancylight popup-btn" data-fancybox-group="light">
-                            <div class="box1">
-                                <img src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" >
-                                <div class="box-content1">
-                                    <h3 class="title">Williamson</h3>
-                                    <span class="post">Web designer</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
             </div>
 
