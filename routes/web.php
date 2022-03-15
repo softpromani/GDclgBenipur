@@ -2,10 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\UserController;
 
 Auth::routes();
 
@@ -90,3 +87,34 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     Route::get('/contact', [AdminController::class,'contact'])->name('contact');
     Route::get('/delcontact', [AdminController::class,'delContact'])->name('delcontact');
 });
+
+Route::get('/', [UserController::class,'index'])->name('index');
+Route::get('/about-college', [UserController::class,'aboutCollege'])->name('about-college');
+Route::get('/vision-mission', [UserController::class,'visionMission'])->name('vision-mission');
+// Route::get('/chancellor', [UserController::class,'chancellor'])->name('chancellor');
+Route::get('/vice-chancellor-desk', [UserController::class,'viceChancellorDesk'])->name('vice-chancellor-desk');
+Route::get('/pricipal-desk', [UserController::class,'pricnpalDesk'])->name('pricipal-desk');
+Route::get('/college-achievments', [UserController::class,'collegeAchievments'])->name('college-achievments');
+
+Route::get('/admission', [UserController::class,'admission'])->name('admission');
+Route::get('/courses', [UserController::class,'courses'])->name('courses');
+Route::get('/academic-calendar', [UserController::class,'academicCalendar'])->name('academic-calendar');
+Route::get('/fee-structure', [UserController::class,'feeStructure'])->name('fee-structure');
+Route::get('/teaching-staff', [UserController::class,'teachingStaff'])->name('teaching-staff');
+Route::get('/non-teaching-staff', [UserController::class,'nonTeachingStaff'])->name('non-teaching-staff');
+Route::get('/time-table', [UserController::class,'timeTable'])->name('time-table');
+Route::get('/regualtion', [UserController::class,'regualtion'])->name('regualtion');
+Route::get('/ncc', [UserController::class,'ncc'])->name('ncc');
+Route::get('/nss', [UserController::class,'nss'])->name('nss');
+Route::get('/canteen', [UserController::class,'canteen'])->name('canteen');
+Route::get('/hostel', [UserController::class,'hostel'])->name('hostel');
+Route::get('/internet', [UserController::class,'internet'])->name('internet');
+
+Route::get('/science', [UserController::class,'science'])->name('science');
+Route::get('/arts', [UserController::class,'arts'])->name('arts');
+
+Route::get('/contact-us', [UserController::class,'contactUs'])->name('contact-us');
+Route::post('/savecontact', [UserController::class,'saveContact'])->name('savecontact');
+
+Route::get('/other-cell', [UserController::class,'otherCell'])->name('othercell');
+

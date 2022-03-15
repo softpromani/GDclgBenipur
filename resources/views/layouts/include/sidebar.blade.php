@@ -98,14 +98,14 @@
                     <p>Images</p>
                   </a>
                 </li>
-              
+
             </ul>
             <li class="nav-item">
                 <a href="{{route('admin.press')}}" class="nav-link">
                   <i class="nav-icon fas fa-newspaper"></i>
                   <p> Manage Press </p>
                 </a>
-                
+
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -174,7 +174,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('admin.contact')}}" class="nav-link">
                   <i class="nav-icon fas fa-address-card"></i>
                   <p> Contact Us </p>
                 </a>
