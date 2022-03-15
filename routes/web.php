@@ -86,6 +86,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     // View Contacts Routes
     Route::get('/contact', [AdminController::class,'contact'])->name('contact');
     Route::get('/delcontact', [AdminController::class,'delContact'])->name('delcontact');
+
+    Route::get('/logout', [AdminController::class,'logout'])->name('logout');
 });
 
 Route::get('/', [UserController::class,'index'])->name('index');

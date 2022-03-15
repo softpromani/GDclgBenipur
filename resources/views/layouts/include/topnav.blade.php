@@ -4,14 +4,11 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('admin.dashboard')}}" class="nav-link">Home</a>
-      </li>
-    </ul>
 
+    </ul>
+    <h4 style="text-align: center;font-weight:bold;">Sub-Divisional Govt. Degree College, Benipur</h4>
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-     
 
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
@@ -19,7 +16,7 @@
           <i class="far fa-comments"></i>
         </a>
       </li>
-      
+
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -32,7 +29,7 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">Change Password</a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">Logout</a>
+          <a href="{{route('admin.logout')}}" class="dropdown-item">Logout</a>
         </div>
       </li>
     </ul>

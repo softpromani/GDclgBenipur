@@ -766,4 +766,9 @@ function delContact(Request $req)
     }
 }
 
+function logout() {
+    Session::flush();
+    return redirect('/admin');
+}
+
 }
