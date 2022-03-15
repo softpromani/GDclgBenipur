@@ -18,6 +18,7 @@ use App\Models\Non_Teacher;
 use App\Models\Press;
 use App\Models\Slider;
 use App\Models\SSR;
+use App\Models\Contact;
 use App\Models\Time_Table;
 
 class AdminController extends Controller
@@ -185,7 +186,6 @@ class AdminController extends Controller
         {
             $fext=$req->file('file')->extension();
             $fname=date('d-M-Y').rand(0,9).rand(0,9).rand(0,9).rand(0,9).".".$fext;
-            Log::info('fname'.$fname);
             $req->file->move(public_path('upload/non_teachers'),$fname);
             $data = [
                 'name' => $req->name,
@@ -274,15 +274,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! Slider not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! Slider not added please Choose pic....');
         }
-        
-     
+
+
     }
 
     function delSlider(Request $req)
@@ -330,15 +330,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! Gallery not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! Gallery not added please Choose pic....');
         }
-        
-     
+
+
     }
 
     function delGallery(Request $req)
@@ -352,12 +352,6 @@ class AdminController extends Controller
     }
 
 
-
-
-
-
-
-    
       //Press methods
       public function press() {
         $files = Press::where('deleted_at',NULL)->get();
@@ -390,15 +384,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! Press not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! Press not added please Choose pic....');
         }
-        
-     
+
+
     }
 
     function delPress(Request $req)
@@ -445,15 +439,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! Academic not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! Academic not added please Choose pic....');
         }
-        
-     
+
+
     }
 
     function delAcademicCalendar(Request $req)
@@ -469,7 +463,7 @@ class AdminController extends Controller
 
 
 
-        
+
       //Time Table methods
       public function timetable() {
         $files = Time_Table::where('deleted_at',NULL)->get();
@@ -502,15 +496,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! Time Table not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! Time Table not added please Choose pic....');
         }
-        
-     
+
+
     }
 
     function delTimetable(Request $req)
@@ -526,7 +520,7 @@ class AdminController extends Controller
 
 
 
- 
+
       //Fees methods
       public function feeStructure() {
         $files = Fee_Structure::where('deleted_at',NULL)->get();
@@ -559,19 +553,19 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! Fees not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! Fees not added please Choose pic....');
         }
-        
- 
-        
+
+
+
     }
 
-        
+
       //AQAR methods
       public function aqar() {
         $files = AQAR::where('deleted_at',NULL)->get();
@@ -604,15 +598,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! AQAR  not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! AQAR  not added please Choose pic....');
         }
-        
- 
+
+
     }
 
     function delaqar(Request $req)
@@ -662,15 +656,15 @@ class AdminController extends Controller
             {
                 return back()->with('failed','OOP\'s !!! SSR  not added please try again....');
             }
-            
+
 
         }
         else
         {
             return back()->with('failed','OOP\'s !!! SSR  not added please Choose pic....');
         }
-        
- 
+
+
     }
 
     function delSsr(Request $req)
@@ -696,7 +690,7 @@ class AdminController extends Controller
                 $data=[
                     'name'=>$req->text1,
                     'title'=>$req->text2,
-                    
+
 
                 ];
                 if(Committee::create($data))
@@ -707,10 +701,10 @@ class AdminController extends Controller
                 {
                     return back()->with('failed','OOP\'s !!! Committee  not added please try again....');
                 }
-            
 
-        
- 
+
+
+
     }
 
     function delCommittee(Request $req)
@@ -723,13 +717,6 @@ class AdminController extends Controller
         }
     }
 
-
-
-
-
-
-
-    
 // Committee-Member Methods
 public function comember() {
     $files = Committee_Member::where('deleted_at',NULL)->get();
@@ -741,7 +728,7 @@ function saveCoMember(Request $req)
             $data=[
                 'name'=>$req->text1,
                 'title'=>$req->text2,
-                
+
 
             ];
             if(Committee_Member::create($data))
@@ -752,10 +739,6 @@ function saveCoMember(Request $req)
             {
                 return back()->with('failed','OOP\'s !!! Committee Member  not added please try again....');
             }
-        
-
-    
-
 }
 
 function delCoMember(Request $req)
@@ -768,5 +751,19 @@ function delCoMember(Request $req)
     }
 }
 
+function contact() {
+    $contacts = Contact::where('deleted_at',NULL)->get();
+    return view('admin.view_contact', compact('contacts'));
+}
+
+function delContact(Request $req)
+{
+    if(Contact::find($req->id)->delete()) {
+        return response()->json(['status' => 1]);
+    }
+    else {
+        return response()->json(['status' => 0]);
+    }
+}
 
 }
